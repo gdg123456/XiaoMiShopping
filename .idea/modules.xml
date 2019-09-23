@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JavaEE.iml" filepath="$PROJECT_DIR$/JavaEE.iml" />
-      <module fileurl="file://$PROJECT_DIR$/xiaomi/xiaomi.iml" filepath="$PROJECT_DIR$/xiaomi/xiaomi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xiaomiqiangtai/xiaomiqiangtai.iml" filepath="$PROJECT_DIR$/xiaomiqiangtai/xiaomiqiangtai.iml" />
     </modules>
   </component>
 </project>
