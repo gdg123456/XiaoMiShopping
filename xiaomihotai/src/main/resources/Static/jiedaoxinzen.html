@@ -13,12 +13,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--js-->
 <script src="js/jquery-2.1.1.min.js"></script> 
 <!--icons-css-->
-<link href="css/font-awesome.css" rel="stylesheet"> 
+<link href="css/font-awesome.css" rel="stylesheet">
+
+<script src="js/jquery.nicescroll.js"></script>
+<script src="js/scripts.js"></script>
+<!--//scrolling js-->
+<script src="js/bootstrap.js"> </script>
 <!--Google Fonts-->
 
-	<script src="js/bootstrap.js"> </script>
 <!--//skycons-icons-->
-	<script src="js/chartinator.js" ></script>
 	<script type="text/javascript">
         jQuery(function ($) {
 
@@ -146,6 +149,31 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--inner block end here-->
 <!--copy rights start here-->
 <div class="copyrights"><!--街道和区县-->
+	<from action="yonhuxinzen" method="post" >
+		<div>区县名:<input name="quxian"></div>
+		<div><input type="submit" value="新增"></div>
+	</from>
+</div>
+<div class="copyrights"><!--街道和区县-->
+   <from action="yonhuxinzen" method="post" >
+	   <div style="margin-left: -50px" class="container">
+		   <div class="btn-group">
+			   <button type="button" class="btn btn-danger">请选择区县</button>
+			   <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" >&nbsp;
+				   <span class="caret"></span>
+			   </button>
+			   <ul class="dropdown-menu">
+				   <li><a href="#">区县1</a></li>
+				   <li><a href="#">区县2</a></li>
+				   <li><a href="#">区县3</a></li>
+				   <li><a href="#">区县4</a></li>
+			   </ul>
+		   </div>
+
+	   </div>
+	   <div>街道名:<input name="jiedao"></div>
+	   <div><input type="submit" value="新增"></div>
+   </from>
 </div>
 <!--COPY rights end here-->
 </div>
@@ -198,10 +226,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     });
 </script>
 <!--scrolling js-->
-<script src="js/jquery.nicescroll.js"></script>
-<script src="js/scripts.js"></script>
-<!--//scrolling js-->
-<script src="js/bootstrap.js"> </script>
 </body>
 </html>
 
