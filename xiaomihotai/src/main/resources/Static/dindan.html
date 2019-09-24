@@ -71,26 +71,38 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</script>
 		<!-- /script-for sticky-nav -->
 <!--inner block start here-->
-<div class="inner-block"><!-- 删除该代码修改其他数据-->
-	<h3>订单详情</h3>
-	<ul style="list-style: none;">
-		<li style="color: #4F52BA">
-			<p style="float: left;">订单名字</p>
-			<div style="float: right;"><span style="margin: 0px 0px 0px -250px;">订单时间123312312</span><a href="xg">修改</a></div>
-		</li>
+<div class="inner-block">
 
-	</ul>
 </div>
 <!--inner block end here-->
 <!--copy rights start here-->
-<div class="copyrights">
+<div class="copyrights" style="margin-top: -50px"><!-- 删除该代码修改其他数据-->
+	<from action="" method="post">
+	<h3>订单详情</h3>
+	<ul style="list-style: none;">
+		<li style="color: #db9019;font-size:large;background-color: #5ed5d1;">
+			<div style="border-top:1px solid #d6e9c6;padding: 10px">
+				<span style="float: left;">订单名字</span>&nbsp;
+				<div style="float: right;"><span style="margin-right:20px">订单时间123312312</span><a href="xg">修改</a></div>
+			</div>
+		</li>
+		<li style="color: #db9019;font-size:large;background-color: #5ed5d1;">
+			<div style="border-top:1px solid #d6e9c6;padding: 10px">
+				<span style="float: left;">订单名字</span>&nbsp;
+				<div style="float: right;"><span style="margin-right:20px">订单时间123312312</span><a href="xg">修改</a></div>
+			</div>
+		</li>
+
+	</ul>
+	</from>
 </div>
 <!--COPY rights end here-->
 </div>
 </div>
 <!--slider menu-->
 <div class="sidebar-menu">
-	<div class="logo"> <a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span> </a> <a href="#"> <span id="logo" ></span>
+	<div class="logo"> <a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span> </a> <a href="#">
+		<span id="logo" ></span>
 		<!--<img id="logo" src="" alt="Logo"/>-->
 	</a> </div>
 	<div class="menu">
@@ -105,7 +117,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<span class="fa fa-angle-right" style="float: right"></span></a>
 				<ul>
 					<li><a href="jiajeguanli.html">价格管理</a></li>
-					<li><a href="shangpin.html">商品分类</a></li>
+					<li><a href="shangpinfenlei.html">商品分类</a></li>
 				</ul>
 			</li>
 			<li><a href="404.html"><i class="fa fa-bar-chart"></i><span>404模板表</span></a></li>
@@ -117,9 +129,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!--slide bar menu end here-->
 <script>
-var toggle = true;
             
-$(".sidebar-icon").click(function() {                
+$(".sidebar-icon").click(function() {
+    var toggle = true;
   if (toggle)
   {
     $(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
