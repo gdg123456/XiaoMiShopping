@@ -1,4 +1,4 @@
-<html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
 <title>404</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -118,7 +118,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						   </div>
 						   </div>
 					   </li>
-				   </ul>
+				   </ul><br>
+				   <DIV style="float: left;">请输入查询的内容
+					   <input  class="btn btn-warning btn-xs" name="">
+					   <span><input class="btn btn-warning btn-xs"  type="submit" value="查询"></span>
+				   </DIV>
+				   <DIV style="float: right;margin-top: -20px"><span th:text="${page.getPageNum()}">页数</span>
+					   <A class="btn btn-primary" th:href="@{'http://localhost:8080/topianxitong/votelist?ye=1'+'&yid='+${yid}}">首页</A>
+					   <a class="btn btn-primary" th:href="@{'http://localhost:8080/topianxitong/votelist?ye='+${page.getPageNum()-1}+'&yid='+${yid}}">
+						   上一页
+					   </a>
+					   <a class="btn btn-primary" th:href="@{'http://localhost:8080/topianxitong/votelist?ye='+${page.getPageNum()+1}+'&yid='+${yid}}">下一页</a>
+					   <A class="btn btn-primary" th:href="@{'http://localhost:8080/topianxitong/votelist?ye='+${page.getPages()}+'&yid='+${yid}}">末页</A>
+				   </DIV>
 			   </from>
 		   </div>
 <!--COPY rights end here-->

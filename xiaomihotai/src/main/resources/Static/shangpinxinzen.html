@@ -68,13 +68,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                            $(".header-main").removeClass("fixed");
                        }
                    });
-					$(".shan").click(function () {
-						$(this).parent().remove()
-                    })
 				   $(".jia").click(function () {
 					   $("#tupian").append("<div style=\"padding: 10px;\" name=\"用户\">\n" +
-                           "<input style=\"margin: 0px auto;padding: 0px 0px 0px 0px\" class=\"select\" type=\"file\" >" +
-                           "<input style=\"\" class=\"btn btn-primary btn-xs shan\" name=\"gmsj\" type=\"submit\" value=\"删除图片\"/>" 						+ "</div>")
+                           "\t\t\t\t<input style=\"margin: 0px auto;padding: 0px 0px 0px 0px\" class=\"select\" type=\"file\" >\n" +
+                           "\t\t\t\t<input style=\"\" class=\"btn btn-primary btn-xs shan\" name=\"gmsj\" type=\"submit\" value=\"删除图片\"/>\n" +
+                           "\t\t\t</div>")
+                       $(".shan").click(function () {
+                           $(this).parent().remove()
+                       })
+                   })
+                   $(".shan").click(function () {
+                       $(this).parent().remove()
                    })
                });
 		   </script>
