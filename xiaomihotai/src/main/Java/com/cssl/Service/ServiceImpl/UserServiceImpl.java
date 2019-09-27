@@ -1,4 +1,4 @@
-package com.cssl.Service.ServiceImpl;
+package com.cssl.service.ServiceImpl;
 
 public class UserServiceImpl {
 }

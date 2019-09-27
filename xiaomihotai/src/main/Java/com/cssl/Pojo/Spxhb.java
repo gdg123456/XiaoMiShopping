@@ -1,4 +1,4 @@
-package com.cssl.Pojo;
+package com.cssl.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

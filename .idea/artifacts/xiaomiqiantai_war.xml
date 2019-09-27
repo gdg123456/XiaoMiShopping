@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="xiaomiqiantai:war">
+    <output-path>$PROJECT_DIR$/xiaomiqiantai/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>xiaomiqiantai</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="xiaomi.war">
+      <element id="artifact" artifact-name="xiaomiqiantai:war exploded" />
+    </root>
+  </artifact>
+</component>

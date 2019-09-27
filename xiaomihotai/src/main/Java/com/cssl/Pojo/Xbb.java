@@ -1,4 +1,4 @@
-package com.cssl.Pojo;
+package com.cssl.pojo;
 /**
  * 性别类
  * author:gdg

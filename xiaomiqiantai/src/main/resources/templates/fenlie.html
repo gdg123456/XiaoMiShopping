@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>carousel模块快速使用</title>
+    <link rel="stylesheet" href="js/css/layui.css" media="all">
+    <style type="text/css">
+        .channel-page {
+            padding-bottom:80px;
+        }
+        .page-main {
+            background:#f5f5f5;
+        }
+        .return.show {
+            visibility:visible;
+            opacity:1
+        }
+        .return {
+            z-index:10;
+            display:inline-block;
+            height:40px;
+            width:40px;
+            line-height:40px;
+            position:fixed;
+            bottom:20px;
+            right:40px;
+            color:#fff;
+            text-align:center;
+            font-size:26px;
+            font-weight:700;
+            background:rgba(202,54,33,.7);
+            visibility:hidden;
+            opacity:0;
+            -webkit-transition:all .3s;
+            transition:all .3s;
+            text-decoration:none
+        }
+        [class*=iconfont] {
+            font-family:iconfont!important;
+            font-style:normal;
+            -webkit-font-smoothing:antialiased;
+            -webkit-text-stroke-width:.2px;
+            -moz-osx-font-smoothing:grayscale
+        }
+        .lable{
+            width:1226px;
+            margin:0 auto
+        }
+        .title{
+            position:relative;
+            z-index:5
+        }
+        .title h2{
+            line-height:64px;
+            margin:0;
+            padding-top:4px;
+            color:#333;
+            font-size:24px;
+            font-weight:400
+        }
+        .product-imgText{
+            height:434px;
+            width:1226px;
+            margin:0 auto
+        }
+        .product-imgText .product-cell{
+            position:relative;
+            height:100%;
+            background:#fff
+        }
+        .product-imgText .product-cell .figure{
+            width:854px;
+            height:100%;
+            position:relative
+        }
+        .product-imgText .product-cell .figure img{
+            display:block;
+            width:100%;
+            height:100%
+        }
+        a:hover{
+            text-decoration:none;
+            color:#ff6700
+        }
+        a {
+            color:#757575;
+            border:0
+        }
+        .product-imgText .content{
+            position:absolute;
+            left:916px;
+            top:94px;
+            bottom:0;
+            width:270px
+        }
+        .product-imgText .content .title{
+            line-height:32px;
+            margin:0;
+            font-weight:400
+        }
+        .product-imgText .content .title a{
+            color:#333;
+            color:rgba(51,51,51,.9);
+            font-size:32px
+        }
+        .product-imgText .content .desc{
+            width:270px;
+            line-height:22px;
+            min-height:44px;
+            margin:4px 0 0;
+            color:#333;
+            color:rgba(51,51,51,.7);
+            font-size:14px
+        }
+        .product-imgText .content .price{
+            line-height:45px;
+            margin:17px 0 0;
+            color:#ff6700;
+            font-size:12px;
+            font-weight:700
+        }
+        .product-imgText .content .price strong{
+            font-weight:400;
+            font-size:32px;
+            letter-spacing:-2px
+        }
+        .product-imgText .content .price del{
+            margin-left:18px;
+            color:#ccc;
+            color:rgba(51,51,51,.6)
+        }
+        .shadow{
+            -webkit-transition:all .2s linear;
+            transition:all .2s linear
+        }
+        .shadow:hover{
+            -webkit-box-shadow:0 15px 30px rgba(0,0,0,.1);
+            box-shadow:0 15px 30px rgba(0,0,0,.1);
+            -webkit-transform:translate3d(0,-5px,0);
+            transform:translate3d(0,-5px,0);
+            z-index:3
+        }
+        .product-imgText .product-cell .content .link a{
+            color:#333;
+            color:rgba(51,51,51,.7);
+        }
+        .product-two4 {
+            height:482px;
+            width:1226px;
+            margin:0 auto
+        }
+        .product-two4 .row{
+            height:100%;
+        }
+        .row {
+            margin-left:-14px
+        }
+        .product-two4 .product-cell {
+            position:relative;
+            height:100%;
+            background:#fff;
+            text-align:left;
+            overflow:hidden;
+        }
+        .sp10{
+            width:606px;
+            /*来自.sp1至.sp20*/
+            float:left;
+            margin-left:14px;
+            min-height:1px
+        }
+        .product-two4 .figure {
+            width:100%;
+            height:358px
+        }
+        .product-two4 .figure img {
+            display:block;
+            width:100%;
+            height:100%
+        }
+        img {
+            border:0
+        }
+        .product-two4 .title {
+            font-weight:400;
+            white-space:nowrap;
+            text-overflow:ellipsis;
+            line-height:26px;
+            margin:38px 0 0 48px
+        }
+        .product-two4 h3 {
+            font-size:1.17em
+        }
+        .product-two4 .title a {
+            color:#333;
+            color:rgba(51,51,51,.9);
+            font-size:24px
+        }
+        .product-two4 .desc {
+            line-height:18px;
+            margin:3px 0 0 48px;
+            color:#333;
+            color:rgba(51,51,51,.7);
+            font-size:14px
+        }
+        .product-two4 .price {
+            line-height:30px;
+            color:#ff6700;
+            font-size:12px;
+            font-weight:700;
+            position:absolute;
+            right:48px;
+            bottom:30px;
+            margin:0
+        }
+        .product-two4 .price strong {
+            font-weight:400;
+            font-size:30px
+        }
+        b,
+        strong {
+            font-weight:700
+        }
+        .product-two4 .price del {
+            color:#ccc;
+            color:rgba(51,51,51,.6)
+        }
+        .channel-line {
+            width:100%
+        }
+
+    </style>
+</head>
+<body>
+<div class="page-main channel-page">
+    <a data-v-61428f58="" href="javascript:void(0);" class="return iconfont show" data-stat-id="a1196d204b4e5fe0" onclick="_msq.push(['trackEvent', '2c573917a333c7fe-a1196d204b4e5fe0', 'javascript:void0', 'pcpid', '']);"></a>
+    <!--轮播图-->
+    <div class="layui-carousel" id="test1">
+        <div carousel-item id="imgs">
+            <div><img src="imgs/1.jpg" style="height: 620px; padding-bottom: 2560px; position: relative; left: 50%; margin-left: -1280px;"/></div>
+            <div><img src="imgs/2.jpg" style="height: 620px; padding-bottom: 2560px; position: relative; left: 50%; margin-left: -1280px;"/></div>
+        </div>
+    </div>
+    <!--------->
+    <!--分类标题-->
+    <div class="lable">
+        <div class="title">
+            <h2>小米项目</h2>
+        </div>
+    </div>
+    <!--------->
+    <!--第一商品展示-->
+    <div class="product-imgText">
+        <div class="product-cell shadow">
+            <div class="figure">
+                <a href="index.html"><img style="background-color: rgb(178, 184, 205);" src="imgs/3.jpg"></a>
+            </div>
+            <div class="content">
+                <h3 class="title">
+                    <a href="">小米名称</a><!--商品url-->
+                </h3>
+                <p class="desc">商品说明</p>
+                <p class="price">
+                    <strong >2200</strong>元
+                    <span>起</span>
+                    <del>2599元</del>
+                </p>
+                <p class="link">
+                    <a href="">立即购买</a><!--商品url-->
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--------->
+    <div class="channel-line" style="background-color: rgb(245, 245, 245); height: 14px;"></div>
+    <!--两个并排商品-->
+    <div class="product-two4">
+        <div class="row">
+            <div class="sp10 product-cell shadow">
+                <div class="figure">
+                    <a class="exposure" href="">
+                        <img style="background-color: rgb(189, 193, 217);" src="imgs/4.jpg" />
+                    </a>
+                </div>
+                <h3 class="title">
+                    <a class="exposure" href="" >商品名称</a>
+                </h3>
+                <p class="desc">弹出全面屏，4800万三摄&nbsp;</p>
+                <p class="price">
+                    <strong >1999</strong>元
+                    <span >起</span>
+                    <del >2099元</del>
+                </p>
+            </div>
+            <div class="sp10 product-cell shadow">
+                <div class="figure">
+                    <a class="exposure" href="">
+                        <img style="background-color: rgb(189, 193, 217);" src="imgs/5.jpg" />
+                    </a>
+                </div>
+                <h3 class="title">
+                    <a class="exposure" href="" >商品名称</a>
+                </h3>
+                <p class="desc">弹出全面屏，4800万三摄二&nbsp;</p>
+                <p class="price">
+                    <strong >1900</strong>元
+                    <span >起</span>
+                    <del >2000元</del>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--------->
+</div>
+
+<script src="js/layui.all.js"></script>
+<script>
+    layui.use('carousel', function(){
+        var carousel = layui.carousel;
+        //建造实例
+        carousel.render({
+            elem: '#test1'
+            ,width: '100%' //设置容器宽度
+            ,height: '620px'
+            ,arrow: 'always' //始终显示箭头
+            //,anim: 'updown' //切换动画方式
+        });
+    });
+</script>
+
+</body>
+</html>

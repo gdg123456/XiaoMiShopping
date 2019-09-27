@@ -1,4 +1,4 @@
-package com.cssl.Controller;
+package com.cssl.controller;
 
 public class ControllerUser {
 }

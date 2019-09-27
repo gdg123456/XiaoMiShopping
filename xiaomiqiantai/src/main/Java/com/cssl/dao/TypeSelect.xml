@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--类型查询XML-->
+<mapper namespace="com.cssl.Dao.TypeSelect">
+    <!--查询所有手机限18个-->
+    <select id="TypeSelect" resultType="Spxxb">
+        SELECT * FROM spxxb WHERE Spxx_lbid = (SELECT Splb_id FROM splbb WHERE Splb_mc=#{type})
+    </select>
+    <!--热销-->
+    <select id="Sellwell" resultType="Spxxb">
+        SELECT * FROM spxxb WHERE Spxx_id IN(SELECT Ddxx_spid FROM ddxxb GROUP BY Ddxx_Ddbh ORDER BY COUNT(*) DESC)
+    </select>
+</mapper>

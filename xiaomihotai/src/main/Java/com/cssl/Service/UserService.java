@@ -1,4 +1,4 @@
-package com.cssl.Service;
+package com.cssl.service;
 
 public interface UserService {
 }

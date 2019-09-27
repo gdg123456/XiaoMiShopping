@@ -1,4 +1,4 @@
-package com.cssl.Pojo;
+package com.cssl.pojo;
 /**
  * 优惠劵类
  * author:gdg
