@@ -12,7 +12,7 @@ import java.util.List;
 
 @Service
 public class TypeSelectServiceImpl implements TypeSelectService {
-    @Autowired(required = false)
+    @Autowired
     private TypeSelect tdao;
     //根据类型查询
     @Override

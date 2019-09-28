@@ -1,21 +1,29 @@
 package com.cssl.pojo;
-
+import java.io.Serializable;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.io.Serializable;
-
 /**
- * 商品类别表
+ * @author CDN
+ * @desc 
+ * Date: 2019-09-27
  */
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Splbb implements Serializable {
 
-    private Integer splb_id;/*** 商品类别id */
-    private String splb_mc;/*** 商品类别名称*/
+public class Splbb implements Serializable{
+
+	/**
+	 * 商品类别id
+	 */
+  private Integer splbId;
+	/**
+	 * 商品类别名称
+	 */
+  private String splbMc;
+
 }

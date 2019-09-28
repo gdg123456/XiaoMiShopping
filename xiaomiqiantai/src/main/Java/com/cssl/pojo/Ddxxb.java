@@ -1,25 +1,49 @@
 package com.cssl.pojo;
-
+import java.io.Serializable;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.io.Serializable;
-
 /**
- * 订单详细表
+ * @author CDN
+ * @desc 
+ * Date: 2019-09-27
  */
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Ddxxb implements Serializable {
-    private  Integer Ddxx_id;//订单详细id
-    private  String Ddxx_Ddbh;//订单编号
-    private Integer Ddxx_spid;//该详细对应商品id
-    private Integer Ddxx_gmsl;//该个商品的购买数量
-    private double Ddxx_je;//该商品购买数量下对应的金额小结
-    private Integer Ddxx_sptpid;//商品图片id
-    private Integer Ddxx_spxhid;//商品型号id
+
+public class Ddxxb implements Serializable{
+
+	/**
+	 * 订单详细id
+	 */
+  private Integer ddxxId;
+	/**
+	 * 订单编号
+	 */
+  private String ddxxDdbh;
+	/**
+	 * 该详细对应商品id
+	 */
+  private Integer ddxxSpid;
+	/**
+	 * 该个商品的购买数量
+	 */
+  private Integer ddxxGmsl;
+	/**
+	 * 该商品购买数量下对应的金额小结
+	 */
+  private Double ddxxJe;
+	/**
+	 * 下单商品对应图片id
+	 */
+  private Integer ddxxSptpid;
+	/**
+	 * 商品对应型号id
+	 */
+  private Integer ddxxSpxhid;
+
 }

@@ -1,27 +1,49 @@
 package com.cssl.pojo;
-/**
- * 优惠劵类
- * author:gdg
- */
-
+import java.io.Serializable;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.io.Serializable;
-import java.util.Date;
-
+/**
+ * @author CDN
+ * @desc 
+ * Date: 2019-09-27
+ */
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Yhqb implements Serializable {
-    private Integer Yhq_id;//优惠劵详细信息ID(自增)
-    private String Yhq_mc;//优惠劵名称
-    private double Yhq_yhjg;//优惠劵面值大小
-    private Date Yhq_kssj;//优惠劵领取时间
-    private Date Yhq_jssj;//优惠劵失效时间
-    private Integer Yhq_zt;//优惠劵状态(外键)
-    private Integer Yhq_mztj;//优惠券满足条件
+
+public class Yhqb implements Serializable{
+
+	/**
+	 * 优惠券id
+	 */
+  private Integer yhqId;
+	/**
+	 * 优惠券名称
+	 */
+  private String yhqMc;
+	/**
+	 * 优惠券优惠的价格
+	 */
+  private Double yhqYhjg;
+	/**
+	 * 优惠券开始时间
+	 */
+  private java.util.Date yhqKssj;
+	/**
+	 * 优惠券结束时间
+	 */
+  private java.util.Date yhqJssj;
+	/**
+	 * 优惠券状态
+	 */
+  private Integer yhqZt;
+	/**
+	 * 满足该条件优惠券才开始起作用
+	 */
+  private Double yhqMztj;
+
 }

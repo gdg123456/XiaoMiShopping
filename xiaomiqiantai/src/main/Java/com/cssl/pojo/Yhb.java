@@ -1,26 +1,49 @@
 package com.cssl.pojo;
-/**
- * 用户信息类
- * author:gdg
- */
-
+import java.io.Serializable;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.io.Serializable;
-
+/**
+ * @author CDN
+ * @desc 
+ * Date: 2019-09-27
+ */
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Yhb implements Serializable {
-    private Integer Yh_id;//用户信息ID(自增)
-    private String Yh_mc;//用户名称
-    private String Yh_xb;//性别ID(外键)
-    private String Yh_admin;//登录账户
-    private String Yh_pwd;//登录密码
-    private String Yh_sjhm;//用户手机号码
-    private Integer Yh_lxid;//用户类型ID(外键)
+
+public class Yhb implements Serializable{
+
+	/**
+	 * id
+	 */
+  private Integer yhId;
+	/**
+	 * 用户名称
+	 */
+  private String yhMc;
+	/**
+	 * 用户对应的性别
+	 */
+  private String yhXb;
+	/**
+	 * 用户账号
+	 */
+  private String yhAdmin;
+	/**
+	 * 用户密码
+	 */
+  private String yhPwd;
+	/**
+	 * 用户手机号码
+	 */
+  private String yhSjhm;
+	/**
+	 * 用户类型id
+	 */
+  private Integer yhLxid;
+
 }

@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 @Controller
 public class ControllerUser {
 
+
       @Autowired
       private UserService yhcz;
       //实现用户的登录---------用session来储存用户名验证--------用aplication来储存所有的用户对象
@@ -26,11 +27,16 @@ public class ControllerUser {
      * @return
      */
       @PostMapping("/denlu.html")
-      public String denLu(Yhb yh1,HttpSession session){
+      public String denLu(Yhb yh1, HttpSession session){
           Yhb yh=yhcz.denglu(yh1);
+          System.out.println("登录");
+          System.out.println("打印出yh:"+yh);
           if(yh != null){
               //登录成功
-              session.setAttribute("useradmin",yh.getYh_admin());
+              System.out.println("登录成功！欢迎用户："+yh.getYhAdmin());
+              //session.setAttribute("useradmin",yh.getYhadmin());
+              session.setAttribute("useradmin",yh.getYhAdmin());
+              System.out.println("登录成功！");
               return "index";
           }
           //后端验证----------登录失败--账户密码错误
@@ -54,11 +60,11 @@ public class ControllerUser {
      */
     @PostMapping("/zhuche.html")
       public String zhuchecz(Yhb yh1, HttpSession session){
-        yh1.setYh_lxid(1);
+        yh1.setYhLxid(1);
         int pdz=yhcz.zhuche(yh1);
         if(pdz>0){
             //注册成功
-            session.setAttribute("useradmin",yh1.getYh_admin());
+           // session.setAttribute("useradmin",yh1.getYhadmin());
             return  "index";
         }else{
             //注册失败

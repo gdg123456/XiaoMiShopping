@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserInfoServiceImpl implements UserInfoService {
 
-    @Autowired(required = false)
+    @Autowired
     private UserInfoDao userInfoDao;
 
     @Override
