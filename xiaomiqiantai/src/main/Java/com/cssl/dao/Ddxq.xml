@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--类型查询XML-->
+<mapper namespace="com.cssl.dao.DdxqDao">
+    <!--查询订单详情的总体情况-->
+    <select id="selectDdxq" resultType="com.cssl.vo.Ddxq">
+        SELECT
+        `dd_bh`,`dd_zje`,`ddzt_sm`,`shdz_shrxm`,`shdz_shrdh`,`qx_name`,`jd_name`,`shdz_sm`
+        FROM `ddb` ddb
+        INNER JOIN `dingdan_zt` ddzt ON ddb.`dd_ztid`=ddzt.`ddzt_id`
+        INNER JOIN `shdzb` shdzb ON shdzb.`shdz_id`=ddb.`dd_shdzid`
+        INNER JOIN `jdb` jd ON jd.`jd_id`=shdzb.`shdz_jdid`
+        INNER JOIN `qxb` qxb ON qxb.`qx_id`=shdzb.`shdz_qxid`
+        WHERE `dd_bh`=#{dd_bh}
+    </select>
+    <!--查询订单详情的一个商品集合-->
+    <select id="selectSpjh" resultType="com.cssl.vo.Ygsp">
+        SELECT `sptp_tplj`,`spxx_mc`,`sptp_ys`,`spxhb_lxsm`,`spxhb_spxhdyjg`,`ddxx_gmsl`
+        FROM `sptpb` sptpb INNER JOIN `ddxxb` ddxqb ON sptpb.`sptp_id`=ddxqb.`ddxx_sptpid`
+                           INNER JOIN  `spxxb` spxxb ON spxxb.`spxx_id`=ddxqb.`ddxx_spid`
+                           INNER JOIN `spxhb` spxhb ON spxhb.`spxhb_spid`=spxxb.`spxx_id`
+        WHERE `ddxx_Ddbh`=#{ddxx_Ddbh}
+    </select>
+</mapper>

@@ -2,12 +2,14 @@
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/xiaomiqiangtai" />
+    <file type="web" url="file://$PROJECT_DIR$/xiaomiqiantai" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/xiaomi/pom.xml" />
         <option value="$PROJECT_DIR$/xiaomiqiangtai/pom.xml" />
+        <option value="$PROJECT_DIR$/xiaomiqiantai/pom.xml" />
       </list>
     </option>
   </component>

@@ -8,7 +8,7 @@ import lombok.Setter;
 /**
  * @author CDN
  * @desc 
- * Date: 2019-09-27
+ * Date: 2019-10-08
  */
 @Getter
 @Setter
@@ -29,5 +29,9 @@ public class MySc implements Serializable{
 	 * 被收藏的商品id
 	 */
   private Integer myscSpid;
+	/**
+	 * 收藏该商品的时间
+	 */
+  private java.util.Date myscScsj;
 
 }

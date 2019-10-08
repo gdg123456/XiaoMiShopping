@@ -27,8 +27,6 @@ public class UserServiceImpl implements UserService {
     @Override
     public Yhb denglu(Yhb yh) {
         QueryWrapper<Yhb> tj=new QueryWrapper<Yhb>();
-        //tj.eq("Yh_admin",yh.getYhadmin());
-        //tj.eq("Yh_pwd",yh.getYhpwd());
         tj.eq("Yh_admin",yh.getYhAdmin());
         tj.eq("Yh_pwd",yh.getYhPwd());
         Yhb yhb = usercz.selectOne(tj);

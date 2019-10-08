@@ -8,14 +8,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="xiaomiqiangtai" />
+        <module name="xiaomi" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="xiaomi" target="1.7" />
       <module name="xiaomiqiangtai" target="1.7" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="xiaomi" options="-parameters" />
       <module name="xiaomiqiangtai" options="-parameters" />
     </option>
   </component>

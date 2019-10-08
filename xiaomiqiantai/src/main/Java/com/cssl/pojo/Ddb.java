@@ -8,7 +8,7 @@ import lombok.Setter;
 /**
  * @author CDN
  * @desc 
- * Date: 2019-09-27
+ * Date: 2019-10-08
  */
 @Getter
 @Setter
@@ -37,5 +37,9 @@ public class Ddb implements Serializable{
 	 * 订单状态id
 	 */
   private Integer ddZtid;
+	/**
+	 * 订单下单时间
+	 */
+  private java.util.Date ddXdsj;
 
 }

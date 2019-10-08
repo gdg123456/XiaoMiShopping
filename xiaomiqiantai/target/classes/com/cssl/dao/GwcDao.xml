@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--类型查询XML-->
+<mapper namespace="com.cssl.dao.GwcDao">
+    <!--查询一个用户的购物车-->
+    <select id="select" resultType="com.cssl.vo.Ygsp">
+            SELECT
+            `sptp_tplj`,`spxx_mc`,`sptp_ys`,`spxhb_lxsm`,`spxhb_spxhdyjg`,`gwc_spsl`
+            FROM `my_gwc` gwc
+            INNER JOIN `spxxb` spxxb ON gwc.`gwc_spid`=spxxb.`spxx_id`
+            INNER JOIN `spxhb` spxhb ON spxhb.`spxhb_id`=gwc.`gwc_spxhid`
+            INNER JOIN `sptpb` sptpb ON gwc.`gwc_sptpid`=sptpb.`sptp_id`
+            WHERE gwc.`gwc_yhid`=#{gwc_yhid}
+    </select>
+</mapper>
